@@ -1,0 +1,208 @@
+/* Responsive Styles */
+
+/* Tablet and smaller screens (< 1024px) */
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 15px;
+    }
+    
+    .container {
+        padding: 0 var(--space-5);
+    }
+    
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: var(--space-6);
+    }
+    
+    .hero-text {
+        margin-top: var(--space-5);
+    }
+    
+    .hero-text .description {
+        margin: 0 auto var(--space-6);
+    }
+    
+    .hero-cta {
+        justify-content: center;
+    }
+    
+    .section {
+        padding: var(--space-8) 0;
+    }
+    
+    .projects-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--color-white);
+        padding: var(--space-5) 0;
+        gap: var(--space-4);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-150%);
+        transition: transform var(--transition-normal);
+        z-index: var(--z-dropdown);
+        text-align: center;
+    }
+    
+    .nav-menu.active {
+        transform: translateY(0);
+    }
+    
+    .nav-menu a {
+        color: var(--color-neutral-800) !important;
+        display: block;
+        padding: var(--space-2) 0;
+    }
+    
+    .hero-text h1 {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .hero-text h2 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: var(--space-4);
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Small Mobile Screens (< 480px) */
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .hero-text h1 {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .hero-text h2 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .section-subtitle {
+        font-size: var(--font-size-lg);
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+    
+    .hero-cta .btn {
+        width: 100%;
+    }
+    
+    .profile-image {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .timeline-item {
+        padding-left: var(--space-6);
+    }
+    
+    .contact-form {
+        padding: var(--space-4);
+    }
+}
+
+/* Extra Large Screens (> 1440px) */
+@media screen and (min-width: 1440px) {
+    html {
+        font-size: 18px;
+    }
+    
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .nav-toggle,
+    .nav-menu,
+    .hero-cta,
+    .back-to-top,
+    .contact-form,
+    .project-links {
+        display: none !important;
+    }
+    
+    #header {
+        position: relative;
+        background-color: var(--color-white) !important;
+        box-shadow: none;
+    }
+    
+    .logo a {
+        color: var(--color-primary) !important;
+    }
+    
+    body {
+        color: black;
+        background-color: white;
+    }
+    
+    #hero {
+        background: white;
+        min-height: auto;
+        color: var(--color-neutral-800);
+    }
+    
+    .hero-text h2 {
+        color: var(--color-primary);
+    }
+    
+    .section {
+        padding: var(--space-5) 0;
+        page-break-inside: avoid;
+    }
+    
+    a {
+        text-decoration: underline;
+        color: var(--color-neutral-800);
+    }
+    
+    .profile-image {
+        border: 1px solid var(--color-neutral-300);
+    }
+}
