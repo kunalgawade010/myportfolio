@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Personal Portfolio Website
 
 A clean, modern, and responsive personal portfolio website built with HTML and CSS.
@@ -63,3 +64,6 @@ Both GitHub Pages and Netlify allow you to use a custom domain:
 - Icons: [Font Awesome](https://fontawesome.com/)
 - Fonts: [Google Fonts](https://fonts.google.com/) (Inter)
 - Images: [Pexels](https://www.pexels.com/)
+=======
+# myportfolio
+>>>>>>> 03577ca48e147e13963aed0093d571262dbf84b3
